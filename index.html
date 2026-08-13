@@ -204,18 +204,18 @@
             <header class="project-head">
               <span class="folder-icon" aria-hidden="true">📁</span>
               <span class="project-links">
-                <a href="https://github.com/smahden" target="_blank" rel="noopener" aria-label="Source code">Code ↗</a>
+                <a href="https://github.com/smahden/portfolio/tree/main/projects/taskflow" target="_blank" rel="noopener" aria-label="Source code">Code ↗</a>
               </span>
             </header>
-            <h3>TaskFlow — Project Management App</h3>
+            <h3>TaskFlow — Kanban Task Manager</h3>
             <p>
-              A full-stack Kanban-style task manager with drag-and-drop boards,
-              real-time collaboration over WebSockets, and role-based permissions.
-              Built the REST API, JWT authentication, and an optimistic-update UI
-              that stays responsive even on slow connections.
+              A full-stack Kanban board with native drag-and-drop, JWT
+              authentication, and per-user boards, columns, and cards. The Express
+              API renumbers card positions transactionally on every move, and 22
+              Jest + Supertest tests cover auth, ownership, and movement edge cases.
             </p>
             <ul class="chips project-tech">
-              <li>React</li><li>Node.js</li><li>PostgreSQL</li><li>WebSockets</li><li>Docker</li>
+              <li>Node.js</li><li>Express</li><li>SQLite</li><li>JWT</li><li>Jest</li>
             </ul>
           </article>
 
@@ -223,18 +223,18 @@
             <header class="project-head">
               <span class="folder-icon" aria-hidden="true">📁</span>
               <span class="project-links">
-                <a href="https://github.com/smahden" target="_blank" rel="noopener" aria-label="Source code">Code ↗</a>
+                <a href="https://github.com/smahden/portfolio/tree/main/projects/shoplite" target="_blank" rel="noopener" aria-label="Source code">Code ↗</a>
               </span>
             </header>
             <h3>ShopLite — E-commerce API</h3>
             <p>
-              A production-style e-commerce backend: product catalog with full-text
-              search, cart and checkout flows, Stripe-style payment integration, and
-              an admin dashboard. Includes 90%+ test coverage and a CI pipeline that
-              runs linting, tests, and container builds on every push.
+              A production-style e-commerce backend: searchable product catalog,
+              per-user carts with stock control, and checkout that snapshots prices
+              into immutable order history. Money is stored as integer cents, and
+              22 pytest tests cover auth, permissions, stock limits, and privacy.
             </p>
             <ul class="chips project-tech">
-              <li>Python</li><li>FastAPI</li><li>PostgreSQL</li><li>Redis</li><li>GitHub Actions</li>
+              <li>Python</li><li>FastAPI</li><li>SQLAlchemy</li><li>SQLite</li><li>Pytest</li>
             </ul>
           </article>
 
@@ -242,18 +242,19 @@
             <header class="project-head">
               <span class="folder-icon" aria-hidden="true">📁</span>
               <span class="project-links">
-                <a href="https://github.com/smahden" target="_blank" rel="noopener" aria-label="Source code">Code ↗</a>
+                <a href="https://smahden.github.io/portfolio/projects/devmetrics/?repo=facebook/react" target="_blank" rel="noopener" aria-label="Live demo">Live ↗</a>
+                <a href="https://github.com/smahden/portfolio/tree/main/projects/devmetrics" target="_blank" rel="noopener" aria-label="Source code">Code ↗</a>
               </span>
             </header>
             <h3>DevMetrics — GitHub Analytics Dashboard</h3>
             <p>
-              A dashboard that visualizes a team's GitHub activity — PR cycle time,
-              review load, and merge frequency — using the GitHub API. Implemented
-              smart caching to stay inside API rate limits and interactive charts
-              that handle thousands of data points smoothly.
+              Instant analytics for any public GitHub repository — weekly commit
+              cadence, language share, and contributor load — with every chart
+              hand-rolled in SVG, zero dependencies. Handles the GitHub stats API's
+              202-and-retry dance, rate limits, and shareable deep links.
             </p>
             <ul class="chips project-tech">
-              <li>TypeScript</li><li>Next.js</li><li>GitHub API</li><li>Chart.js</li>
+              <li>JavaScript</li><li>SVG</li><li>GitHub API</li><li>GitHub Pages</li>
             </ul>
           </article>
 

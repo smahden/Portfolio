@@ -21,8 +21,31 @@ A fast, responsive, accessible portfolio site built with **plain HTML, CSS, and 
 ├── script.js                     # Theme toggle, mobile menu, animations
 ├── resume/
 │   └── Mahden_Saleh_Resume.md    # Downloadable résumé (edit + export to PDF)
-└── .github/workflows/deploy.yml  # Auto-deploy to GitHub Pages
+├── projects/                     # Three complete, tested portfolio projects ↓
+│   ├── taskflow/                 # Kanban app — Node/Express/SQLite, 22 Jest tests
+│   ├── shoplite/                 # E-commerce API — FastAPI/SQLAlchemy, 22 pytest tests
+│   └── devmetrics/               # GitHub analytics — zero-dep JS + SVG charts
+├── scripts/split-projects.sh     # Promote each project to its own GitHub repo
+└── .github/workflows/            # deploy.yml (Pages) + ci.yml (runs all test suites)
 ```
+
+## The projects
+
+Each folder in `projects/` is a complete, self-contained application with its own README, test suite, `.gitignore`, and CI workflow:
+
+| Project | Stack | Tests | Highlights |
+|---|---|---|---|
+| **TaskFlow** | Node.js, Express, SQLite | 22 (Jest + Supertest) | JWT auth, ownership enforcement, transactional drag-and-drop reordering |
+| **ShopLite** | Python, FastAPI, SQLAlchemy 2.0 | 22 (pytest) | Stock control, immutable order snapshots, money as integer cents |
+| **DevMetrics** | Vanilla JS, GitHub REST API | browser-verified | Hand-rolled SVG charts, 202-retry handling, deep links; live on this site's Pages deploy |
+
+**To give each project its own GitHub repository** (recommended — separate repos look better on a profile): install the [GitHub CLI](https://cli.github.com), run `gh auth login`, then:
+
+```bash
+./scripts/split-projects.sh
+```
+
+Each new repo's CI goes green on the first push. Afterwards, point the portfolio's `Code ↗` links at the new repo URLs.
 
 ## Getting it live (one-time setup)
 

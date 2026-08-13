@@ -41,14 +41,14 @@ Software engineer with hands-on experience building full-stack web applications 
 
 ## Projects
 
-### TaskFlow — Project Management App
-Full-stack Kanban task manager with real-time collaboration (WebSockets), JWT auth, and role-based permissions. *React, Node.js, PostgreSQL, Docker.*
+### TaskFlow — Kanban Task Manager · [code](https://github.com/smahden/portfolio/tree/main/projects/taskflow)
+Full-stack Kanban board with JWT auth, per-user ownership enforcement, and drag-and-drop whose card positions are renumbered transactionally server-side; 22 Jest + Supertest API tests. *Node.js, Express, SQLite.*
 
-### ShopLite — E-commerce API
-Production-style backend with full-text product search, cart/checkout flows, payments integration, 90%+ test coverage, and CI on every push. *Python, FastAPI, PostgreSQL, Redis.*
+### ShopLite — E-commerce API · [code](https://github.com/smahden/portfolio/tree/main/projects/shoplite)
+Production-style backend: searchable catalog, carts with stock control, and checkout that snapshots prices into immutable order history; money stored as integer cents; 22 pytest tests. *Python, FastAPI, SQLAlchemy.*
 
-### DevMetrics — GitHub Analytics Dashboard
-Visualizes team GitHub activity (PR cycle time, review load) via the GitHub API with rate-limit-aware caching. *TypeScript, Next.js, Chart.js.*
+### DevMetrics — GitHub Analytics Dashboard · [code](https://github.com/smahden/portfolio/tree/main/projects/devmetrics)
+Zero-dependency analytics page for any public GitHub repo — commit cadence, languages, contributors — with charts hand-rolled in SVG and graceful handling of the stats API's async 202 responses. *JavaScript, SVG, GitHub REST API.*
 
 ---
 

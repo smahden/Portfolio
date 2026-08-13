@@ -247,6 +247,7 @@ ul, ol { list-style: none; }
 .project-card:hover { transform: translateY(-5px); border-color: var(--accent); box-shadow: var(--shadow); }
 .project-head { display: flex; justify-content: space-between; align-items: center; }
 .folder-icon { font-size: 1.7rem; }
+.project-links { display: flex; gap: 0.9rem; }
 .project-links a { font-size: 0.85rem; font-weight: 600; }
 .project-card h3 { color: var(--text-strong); font-size: 1.15rem; }
 .project-card p { font-size: 0.94rem; flex: 1; }
