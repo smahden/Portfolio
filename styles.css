@@ -243,10 +243,20 @@ ul, ol { list-style: none; }
   background: var(--card); border: 1px solid var(--border); border-radius: var(--radius);
   padding: 1.7rem; display: flex; flex-direction: column; gap: 0.9rem;
   transition: transform 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
+  overflow: hidden;
 }
 .project-card:hover { transform: translateY(-5px); border-color: var(--accent); box-shadow: var(--shadow); }
-.project-head { display: flex; justify-content: space-between; align-items: center; }
-.folder-icon { font-size: 1.7rem; }
+.project-shot {
+  /* full-bleed to the card edges */
+  margin: -1.7rem -1.7rem 0.2rem; display: block; overflow: hidden;
+  border-bottom: 1px solid var(--border); background: var(--bg-alt);
+}
+.project-shot img {
+  width: 100%; height: 185px; object-fit: cover; object-position: top;
+  display: block; transition: transform 0.3s ease;
+}
+.project-card:hover .project-shot img { transform: scale(1.04); }
+.project-head { display: flex; justify-content: flex-end; align-items: center; }
 .project-links { display: flex; gap: 0.9rem; }
 .project-links a { font-size: 0.85rem; font-weight: 600; }
 .project-card h3 { color: var(--text-strong); font-size: 1.15rem; }

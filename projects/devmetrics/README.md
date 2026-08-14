@@ -4,6 +4,8 @@ Instant analytics for any public GitHub repository — commit cadence, language 
 
 ![No dependencies](https://img.shields.io/badge/dependencies-0-brightgreen) ![License](https://img.shields.io/badge/license-MIT-blue)
 
+![DevMetrics dashboard analyzing facebook/react](docs/screenshot.png)
+
 ## Features
 
 - 📊 **Commits per week** — 52-week bar chart with month ticks, y-axis gridlines, and per-bar tooltips

@@ -4,6 +4,8 @@ A full-stack Kanban task manager: an Express REST API with JWT authentication an
 
 ![Node](https://img.shields.io/badge/node-%E2%89%A518-brightgreen) ![License](https://img.shields.io/badge/license-MIT-blue) ![Tests](https://img.shields.io/badge/tests-22%20passing-brightgreen)
 
+![TaskFlow board view](docs/screenshot.png)
+
 ## Features
 
 - 🔐 **Auth** — register/login with bcrypt-hashed passwords and 7-day JWTs; identical error messages for wrong-password vs unknown-email so accounts can't be enumerated

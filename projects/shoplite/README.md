@@ -4,6 +4,8 @@ A production-style e-commerce REST API built with **FastAPI** and **SQLAlchemy 2
 
 ![Python](https://img.shields.io/badge/python-3.11%2B-blue) ![FastAPI](https://img.shields.io/badge/FastAPI-0.115%2B-009688) ![License](https://img.shields.io/badge/license-MIT-blue) ![Tests](https://img.shields.io/badge/tests-22%20passing-brightgreen)
 
+![ShopLite interactive API docs](docs/screenshot.png)
+
 ## Features
 
 - 🔐 **Auth** — JWT bearer tokens; PBKDF2-HMAC-SHA256 password hashing with per-user salts (stdlib, no native deps); identical errors for wrong-password vs unknown-email
