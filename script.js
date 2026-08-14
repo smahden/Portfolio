@@ -75,7 +75,7 @@
 
   /* ---------- Reveal sections on scroll ---------- */
   const revealTargets = document.querySelectorAll(
-    ".section-title, .about-grid, .skill-card, .project-card, .timeline-item, .contact-lede"
+    ".section-title, .about-grid, .skill-card, .project-card, .timeline-item, .cert-card, .contact-lede"
   );
   revealTargets.forEach(function (el) { el.classList.add("reveal"); });
 

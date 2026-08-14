@@ -53,15 +53,13 @@ Each new repo's CI goes green on the first push. Afterwards, point the portfolio
 2. On GitHub, go to **Settings → Pages** and set **Source** to **GitHub Actions**.
 3. Push (or re-run the workflow) — the site publishes to `https://smahden.github.io/portfolio/`.
 
-## Customization checklist
+## Keeping it up to date
 
-Everything is plain HTML — search for these in `index.html` and make them yours:
+All content lives in plain HTML in `index.html` (experience, education, certifications, and projects are real, synced from smahden.github.io). When something changes:
 
-- [ ] **Experience & Education** — replace the placeholder company/university names and bullet points with your real history (also in `resume/Mahden_Saleh_Resume.md`).
-- [ ] **Projects** — swap the sample projects for your real repositories; point each card's `Code ↗` link at the actual repo, and add a `Live ↗` link if deployed.
-- [ ] **LinkedIn URL** — update `linkedin.com/in/mahden-saleh` if your profile handle differs.
-- [ ] **About / Quick facts** — adjust location, availability, and the tech list to match you.
-- [ ] **Résumé** — fill in real details, export to PDF, and drop it in `resume/` (update the hero button's `href` if you switch to PDF).
+- **New job or project** — add a timeline item or project card in `index.html`, and mirror it in `resume/Mahden_Saleh_Resume.md`.
+- **Résumé** — `cv.pdf` at the repo root is the canonical download; the Markdown copy in `resume/` is the editable source.
+- **Splitting projects into their own repos** — run `./scripts/split-projects.sh`, then point the `Code ↗` links at the new repos.
 
 ## Local preview
 
