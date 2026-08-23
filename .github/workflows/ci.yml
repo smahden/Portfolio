@@ -7,7 +7,7 @@ on:
 
 jobs:
   taskflow:
-    name: TaskFlow tests (Node)
+    name: TaskFlow — Node tests
     runs-on: ubuntu-latest
     defaults:
       run:
@@ -21,7 +21,7 @@ jobs:
       - run: npm test
 
   shoplite:
-    name: ShopLite tests (Python)
+    name: ShopLite — Python tests
     runs-on: ubuntu-latest
     defaults:
       run:
@@ -33,3 +33,52 @@ jobs:
           python-version: "3.12"
       - run: pip install -r requirements.txt
       - run: pytest -q
+
+  recolab:
+    name: RecoLab — Python tests
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: projects/recolab
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: pip install -r requirements.txt
+      - run: pytest -q
+      - name: Exported demo data is up to date
+        run: |
+          python -m recolab.export
+          git diff --exit-code web/data.json
+
+  sentinel:
+    name: Sentinel — Python tests
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: projects/sentinel
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: pip install -r requirements.txt
+      - run: pytest -q
+      # samples/ is deliberately insecure, so the tool audits its own source only.
+      - run: python -m sentinel.cli secrets sentinel
+
+  uikit:
+    name: UIKit — keyboard and ARIA tests
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: projects/uikit
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - run: npm install
+      - run: npx playwright install --with-deps chromium
+      - run: npm test
